@@ -1,0 +1,6 @@
+<svg width="100" height="100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Curved stroke like LeetCode -->
+  <path d="M80 30C65 45 50 60 40 80C25 110 40 150 75 160C110 170 140 140 140 110C140 90 130 70 110 60" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- Code-like arrow -->
+  <path d="M120 40L160 80L120 120" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

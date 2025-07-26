@@ -1,26 +1,114 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+ 
+}
+.heading{
+  font-size: 2.5rem;
+  font-weight: bold;
+
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Grid backgrounds extracted from Tailwind config */
+   .bg-grid-white {
+    background-color: transparent;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  
+  .bg-grid-black {
+    background-color: transparent;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  
+  .bg-grid-black-100 {
+    background-color: transparent;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size:64px 64px;
+  }
+  
+  /* Opacity variants for grid backgrounds */
+  .bg-grid-white\/\[0\.03\] {
+    background-color: transparent;
+    background-image: 
+      linear-gradient(to right, rgba(143, 137, 137, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(93, 92, 95, 0.03) 1px, transparent 1px);
+    background-size:70px 70px;
+  }
+  
+  .bg-grid-black-100\/\[0\.2\] {
+    background-color: transparent;
+    background-image: 
+      linear-gradient(to right, rgba(80, 77, 77, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(87, 85, 85, 0.2) 1px, transparent 1px);
+    background-size:70px 70px;
+  }
+  /* Black color variants */
+  .bg-black-100 {
+    background-color: #000319;
+  }
+  
+  .bg-black-200 {
+    background-color: rgba(17, 25, 40, 0.75);
+  }
+  
+  .bg-black-300 {
+    background-color: rgba(255, 255, 255, 0.125);
+  }
+  
+  /* White color variants */
+  .bg-white-100 {
+    background-color: #BEC1DD;
+  }
+  
+  .bg-white-200 {
+    background-color: #C1C2D3;
+  }
+  
+  /* Blue color variants */
+  .text-blue-100 {
+    color: #E4ECFF;
+  }
+  
+  .bg-blue-100 {
+    background-color: #E4ECFF;
+  }
+  
+  /* Purple color */
+  .text-purple {
+    color: #CBACF9;
+  }
+  
+  .bg-purple {
+    background-color: #CBACF9;
+  }
 }
