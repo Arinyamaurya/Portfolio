@@ -95,7 +95,7 @@ export const projects = [
     title:"Chatting_appliaction",
     des: "A real-time chat app enabling instant messaging using Socket.IO...",
     img: "/p3.png",
-    iconLists: ["/jS.png","/CSS.svg","/HTML.png","socket-io.svg"],
+    iconLists: ["/jS.png","/CSS.svg","/HTML.png","socket-io.png"],
     link: "https://chat-app-websocket-37wl.onrender.com",
   },
   {
